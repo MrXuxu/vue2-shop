@@ -21205,6 +21205,10 @@ exports.default = {
             this.$emit('add');
         },
         reduce: function reduce() {
+            if (this.nums <= 1) {
+                (0, _vant.Toast)('商品数量最少为1');
+                return;
+            }
             this.$emit('reduce');
         }
     },
